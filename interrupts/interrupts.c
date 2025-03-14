@@ -1,23 +1,19 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 
-#define BTN 3
+#define BTN 16
+#define LED_1 14
+#define LED_2 15
 
-void cbk(uint pin,uint32_t event){
-    //
+void button_callback(uint pin,uint32_t event){
+    //you shouldn't sleep in an interrupt service routine
+    //if you need sleeping use the function busy_wait_ms()
 }
 
 int main()
 {
     stdio_init_all();
-    gpio_init(BTN);
-    gpio_set_dir(BTN, GPIO_IN);
-    gpio_pull_up(BTN);
-
-    gpio_set_irq_enabled_with_callback(BTN, GPIO_IRQ_EDGE_FALL,true, cbk);
-
     while (true) {
-        printf("Hello, world!\n");
-        sleep_ms(1000);
+        //we'll keep the cpu busy doing something_else
     }
 }

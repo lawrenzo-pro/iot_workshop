@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
+#include "hardware/pwm.h"
 
-#define BUTTON_PIN 16
+#define LED_1 14
+#define LED_2 15
 
 int main()
 {
     stdio_init_all();
-    gpio_init(BUTTON_PIN);
-    gpio_set_dir(BUTTON_PIN, GPIO_IN);
-    gpio_pull_up(BUTTON_PIN);
+
     while (true) {
         printf("Hello, world!\n");
         sleep_ms(1000);

@@ -2,6 +2,8 @@
 #include "pico/stdlib.h"
 #include "hardware/adc.h"
 
+#define POT 26
+
 int main()
 {
     stdio_init_all();

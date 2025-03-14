@@ -1,21 +1,19 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
+#define LED_1 14
+#define LED_2 15
 
-bool cbk(struct repeating_timer  *t){
-    //
+bool led1_callback(struct repeating_timer  *t){
+    //logic goes here
 }
-bool cbk2(struct repeating_timer *t){
-
+bool led2_callback(struct repeating_timer *t){
+    //logic goes here
 }
 int main()
 {
     stdio_init_all();
-    struct repeating_timer t;
-    struct repeating_timer t2;
-    add_repeating_timer_ms(300,cbk,NULL,&t);
-    add_repeating_timer_ms(500,cbk2,NULL,&t2);
+   
     while (true) {
-        printf("Hello, world!\n");
-        sleep_ms(1000);
+        tight_loop_contents();
     }
 }
