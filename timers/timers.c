@@ -12,8 +12,11 @@ bool led2_callback(struct repeating_timer *t){
 int main()
 {
     stdio_init_all();
-   
+    gpio_init(LED_1);
+    gpio_init(LED_2);
+    gpio_set_dir(LED_1, GPIO_OUT);
+    gpio_set_dir(LED_2, GPIO_OUT);
     while (true) {
-        tight_loop_contents();
+        tight_loop_contents();// Essentially a no-operation
     }
 }

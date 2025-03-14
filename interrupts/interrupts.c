@@ -13,7 +13,15 @@ void button_callback(uint pin,uint32_t event){
 int main()
 {
     stdio_init_all();
+    gpio_init(LED_1);
+    gpio_init(LED_2);
+    gpio_set_dir(LED_1, GPIO_OUT);
+    gpio_set_dir(LED_2, GPIO_OUT);
     while (true) {
         //we'll keep the cpu busy doing something_else
+        gpio_put(LED_2,1);
+        sleep_ms(500);
+        gpio_put(LED_2,0);
+        sleep_ms(500);
     }
 }
