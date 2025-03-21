@@ -1,6 +1,6 @@
 # IoT Workshop: Arduino Kits & Raspberry Pi
 
-This repository contains the code, resources, and documentation for projects and experiments covered during the IoT workshop, which focuses on using **Arduino kits** and **Raspberry Pi** for building IoT applications.
+This repository contains the code, resources and documentation for projects and experiments covered during the IoT workshop, which focuses on using **Arduino kits** and **Raspberry Pi** for building IoT applications.
 
 ## Table of Contents
 
